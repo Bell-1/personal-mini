@@ -1,0 +1,93 @@
+block,
+view,
+scroll-view,
+swiper,
+movable-area,
+cover-view,
+icon,
+text,
+rich-text,
+progress,
+button,
+checkbox-group,
+form,
+input,
+label,
+picker,
+picker-view,
+radio-group,
+slider,
+switch,
+textarea,
+audio,
+image,
+video,
+camera {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+view[hidden],
+scroll-view[hidden],
+swiper[hidden],
+movable-area[hidden],
+cover-view[hidden],
+icon[hidden],
+text[hidden],
+rich-text[hidden],
+progress[hidden],
+button[hidden],
+checkbox-group[hidden],
+form[hidden],
+input[hidden],
+label[hidden],
+picker[hidden],
+picker-view[hidden],
+radio-group[hidden],
+slider[hidden],
+switch[hidden],
+textarea[hidden],
+audio[hidden],
+image[hidden],
+video[hidden],
+camera[hidden] {
+    display: none !important;
+}
+
+page {
+    min-height: 100vh;
+    font-size: 24upx;
+    color: $fontColor;
+    background: $themeBg;
+
+    .page-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .mask {
+        position: fixed;
+        top: 100vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        transition: opacity 0.3s;
+        z-index: 100;
+
+        &.show {
+            top: 0;
+            opacity: 1;
+        }
+
+        &.transparent {
+            background: transparent;
+        }
+    }
+}
